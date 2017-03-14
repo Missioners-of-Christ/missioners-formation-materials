@@ -1,0 +1,8 @@
+<h1>Here's the list of your first 100 entries:</h1>
+<% @entries.each do |entry| %>
+<ul>
+	<li><%= entry.title %></li>
+</ul>
+<% end %>
+
+<%= javascript_pack_tag "hello_react" %>
