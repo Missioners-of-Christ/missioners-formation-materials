@@ -3,6 +3,7 @@ class ChapterController < ApplicationController
     @entries = ContentfulChapter.all.load
   end
   def show
+  	@markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     @entry = ContentfulChapter.find(params[:id])
   end
 end

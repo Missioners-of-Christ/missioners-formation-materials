@@ -5,21 +5,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+const Hello = React.createClass({
+  propTypes: {
+    name: React.PropTypes.string
+  },
+  render () {
+    return (
+      <div>
+        <h1>Hello {this.props.name}!</h1>
+      </div>
+    )
+  }
+})
 
 Hello.defaultProps = {
   name: 'David'
 }
 
-Hello.propTypes = {
-  name: React.PropTypes.string
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+ReactDOM.render(<Hello/>, document.getElementById('app'))
