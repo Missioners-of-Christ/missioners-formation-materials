@@ -1,2 +1,20 @@
 <h1><%= @entry.title %></h1>
-<p><%= @markdown.render(@entry.introduction).html_safe %></p>
+<div class='introduction' style="color: blue;">
+  <%= @markdown.render(@entry.introduction).html_safe %>
+</div>
+<hr>
+<div class="body">
+  <%= @markdown.render(@entry.body).html_safe %>
+</div>
+<hr>
+<div class="from-the-field">
+  <%= @markdown.render(@entry.fromTheField).html_safe %>
+</div>
+<hr>
+<div class="thoughts-to-ponder">
+  <%= @markdown.render(@entry.thoughtsToPonder).html_safe %>
+</div>
+<hr>
+<div class="faq">
+  <%= @markdown.render(@entry.faq).html_safe %>
+</div>

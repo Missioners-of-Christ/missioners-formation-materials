@@ -1,10 +1,11 @@
 <h1>Here's the list of your first 100 entries:</h1>
 <% @entries.each do |entry| %>
 <ul>
-	
-	<li><%= link_to(entry.title, chapter_path(entry.id)) %><%#= entry.title %></li>
+	<li><%= link_to(entry.title, chapter_path(entry.id)) %></li>
 </ul>
 <% end %>
-
 <div id="app"></div>
+<script>
+  let testString = "<%= @test_string %>"
+</script>
 <%= javascript_pack_tag "hello_react" %>

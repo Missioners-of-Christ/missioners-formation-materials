@@ -13,13 +13,15 @@ const Hello = React.createClass({
     return (
       <div>
         <h1>Hello {this.props.name}!</h1>
+        <h2>Hello {this.props.testString}!</h2>
       </div>
     )
   }
 })
 
 Hello.defaultProps = {
-  name: 'David'
+  name: 'David',
+  testString: testString
 }
 
 ReactDOM.render(<Hello/>, document.getElementById('app'))
